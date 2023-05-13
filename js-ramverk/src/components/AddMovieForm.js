@@ -12,7 +12,6 @@ export default function AddMovieForm() {
     const gradeInputRef = useRef();
 
     function addMovie() {
-        console.log(gradeInputRef.current.value)
         if (titleInputRef.current.value != "") {
             if (gradeInputRef.current.value != 0) {
                 const newId = movies.length + 1;
@@ -44,12 +43,12 @@ export default function AddMovieForm() {
                 <fieldset>
                     <legend>Lägg till en film</legend>
 
-                    <label for="title-field">Titel:</label>
-                    <input type="text" id="title-field" class="form-control" ref={titleInputRef} />
+                    <label htmlFor="title-field">Titel:</label>
+                    <input type="text" id="title-field" className="form-control" ref={titleInputRef} />
 
-                    <label for="rating-field">Betyg:</label>
+                    <label htmlFor="rating-field">Betyg:</label>
 
-                    <select type="text" id="rating-field" class="form-control" ref={gradeInputRef}>
+                    <select type="text" id="rating-field" className="form-control" ref={gradeInputRef}>
                         <option value="0">Välj betyg här...</option>
                         <option value="1">1</option>
                         <option value="2">2</option>

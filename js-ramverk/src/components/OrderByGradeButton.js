@@ -10,7 +10,7 @@ export default function OrderByGrade(props) {
 
     return (
         <div>
-            <button id="order-grade" class="btn btn-primary" onClick={orderMoviesByGrade}>
+            <button id="order-grade" className="btn btn-primary" onClick={orderMoviesByGrade}>
                 Betygsordning
             </button>
         </div>

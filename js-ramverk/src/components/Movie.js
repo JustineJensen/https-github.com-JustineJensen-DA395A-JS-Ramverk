@@ -7,7 +7,7 @@ export default function Movie(props) {
 
     let stars = [];
     for (let i = 0; i < props.item.grade; i++) {
-        stars.push(<img src={starImg} alt="Star" />);
+        stars.push(<img key={i} src={starImg} alt="Star" />);
     }
 
     return (

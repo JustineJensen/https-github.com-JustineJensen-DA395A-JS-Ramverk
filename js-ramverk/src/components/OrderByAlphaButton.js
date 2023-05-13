@@ -10,7 +10,7 @@ export default function OrderByAlpha(props) {
 
     return (
         <div>
-            <button id="order-alphabetic" class="btn btn-primary" onClick={orderMoviesByAlphabet}>
+            <button id="order-alphabetic" className="btn btn-primary" onClick={orderMoviesByAlphabet}>
                 Alfabetisk ordning
             </button>
         </div>
