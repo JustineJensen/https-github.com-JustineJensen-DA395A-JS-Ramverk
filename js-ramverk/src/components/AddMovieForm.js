@@ -5,12 +5,21 @@ import OrderByAlphaButton from './OrderByAlphaButton';
 import OrderByGradeButton from './OrderByGradeButton';
 import './styles/AddMovieForm.css';
 
+/**
+ * This function creates the AddMovieForm component.
+ * It also creates other components such as SaveMoviesButton, MovieList, OrderByAlphaButton and OrderByGradeButton.
+ * @returns AddMovieForm and other components
+ */
 export default function AddMovieForm() {
     const [movies, setMovies] = useState([]);
 
     const titleInputRef = useRef();
     const gradeInputRef = useRef();
 
+    /**
+     * This function adds a movie to the list.
+     * It is passed to the SaveMoviesButton in the props.
+     */
     function addMovie() {
         if (titleInputRef.current.value != "") {
             if (gradeInputRef.current.value != 0) {
@@ -30,6 +39,11 @@ export default function AddMovieForm() {
         }
     }
 
+    /**
+     * This function deletes a movie from the list.
+     * It is first passed to the MovieList component then passed to the Movie componen in the props.
+     * @param {The id of the movie to remove} id 
+     */
     function deleteMovie(id) {
         setMovies(movies.filter((item) => item.id !== id));
     }
@@ -59,10 +73,13 @@ export default function AddMovieForm() {
                 </fieldset>
             </form>
 
+            {
+                //Create components and send all the neccessary data to them through their props.
+            }
             <SaveMoviesButton addMovieFunction={addMovie} />
             <MovieList movies={movies} deleteMovieFunction={deleteMovie} />
             <div id="sort-buttons">
-                <OrderByAlphaButton movies={movies} setMovies={setMovies} />
+                <OrderByAlphaButton movies={movies} setMovies={setMovies} /> 
                 <OrderByGradeButton movies={movies} setMovies={setMovies} />
             </div>
         </div>
