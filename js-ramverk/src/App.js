@@ -2,11 +2,13 @@ import './App.css';
 import AddMovieForm from './components/AddMovieForm';
 import SaveMoviesButton from './components/SaveMoviesButton'
 import OrderByAlphaButton from './components/OrderByAlphaButton'
-import OrderByGrade from './components/OrderByGradeButton';
+import OrderByGradeButton from './components/OrderByGradeButton';
+import MovieList from './components/MovieList';
 function App() {
   return (
     <div className="App">
       <AddMovieForm />
+      <MovieList />
       <SaveMoviesButton />
       <OrderByAlphaButton />
       <OrderByGradeButton/>
