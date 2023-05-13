@@ -51,6 +51,7 @@ export default function AddMovieForm() {
             <SaveMoviesButton addMovieFunction={addMovie}/>
             <MovieList movies={movies} deleteMovieFunction={deleteMovie}/>
             <OrderByAlphaButton movies={movies} setMovies={setMovies}/>
+            <OrderByGradeButton movies={movies} setMovies={setMovies}/>
         </div>
     )
 }
