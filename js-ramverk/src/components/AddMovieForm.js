@@ -17,6 +17,10 @@ export default function AddMovieForm() {
         }]);
     }
 
+    function deleteMovie(id){
+        setMovies(movies.filter((item) => item.id !== id));
+    }
+
     return (
         <div>
             <h1>
@@ -43,7 +47,7 @@ export default function AddMovieForm() {
             </form>
 
             <SaveMoviesButton addMovieFunction={addMovie}/>
-            <MovieList movies={movies}/>
+            <MovieList movies={movies} deleteMovieFunction={deleteMovie}/>
 
         </div>
     )
