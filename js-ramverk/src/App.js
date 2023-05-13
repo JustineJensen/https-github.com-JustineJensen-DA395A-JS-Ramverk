@@ -4,8 +4,11 @@ function App() {
   return (
     <div className="App">
       <h1>
-        Hej :D
+        Min filmlista
       </h1>
+      <h2>
+        Lägg till en film
+      </h2>
     </div>
   );
 }
