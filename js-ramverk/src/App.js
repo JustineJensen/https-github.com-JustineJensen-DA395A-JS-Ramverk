@@ -1,14 +1,9 @@
 import './App.css';
-
+import AddMovieForm from './components/AddMovieForm';
 function App() {
   return (
     <div className="App">
-      <h1>
-        Min filmlista
-      </h1>
-      <h2>
-        Lägg till en film
-      </h2>
+      <AddMovieForm />
     </div>
   );
 }
