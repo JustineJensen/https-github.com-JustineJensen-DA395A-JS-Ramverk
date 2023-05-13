@@ -1,6 +1,7 @@
-import React from 'react'
-import starImg from '../resources/star.png'
-import deleteImg from '../resources/delete.png'
+import React from 'react';
+import starImg from '../resources/star.png';
+import deleteImg from '../resources/delete.png';
+import './styles/Movies.css';
 
 export default function Movie(props) {
 
@@ -15,7 +16,7 @@ export default function Movie(props) {
                 {props.item.title}
                 {stars}
                 {Object.keys(props.item).length > 0 && (
-                    <img src={deleteImg} alt="Delete movie" className="delete-movie" />
+                    <img src={deleteImg} alt="Delete movie" className="delete-movie" onClick={() => props.deleteMovieFunction(props.item.id)}/>
                 )}
             </li>
         </div>
