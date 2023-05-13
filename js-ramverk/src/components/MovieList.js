@@ -1,8 +1,7 @@
 import React from 'react'
-import starImg from '../resources/star.png'
-import deleteImg from '../resources/delete.png'
+import Movie from './Movie'
 
-export default function MovieList() {
+export default function MovieList(props) {
     return (
         <div>
             <h2>Mina filmer</h2>
@@ -20,6 +19,7 @@ export default function MovieList() {
                 </li>
                 */
                 }
+                {props.movies.map(movie => <Movie key={movie.id} item={movie}/>)}
             </ul>
         </div>
     )
