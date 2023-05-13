@@ -11,12 +11,23 @@ export default function AddMovieForm() {
     const gradeInputRef = useRef();
 
     function addMovie(){
-        const newId = movies.length +1;
-        setMovies([...movies, {
-            id: newId,
-            title: titleInputRef.current.value,
-            grade: gradeInputRef.current.value
-        }]);
+        console.log(gradeInputRef.current.value)
+        if(titleInputRef.current.value != ""){
+            if(gradeInputRef.current.value != 0){
+                const newId = movies.length +1;
+                setMovies([...movies, {
+                    id: newId,
+                    title: titleInputRef.current.value,
+                    grade: gradeInputRef.current.value
+                }]);
+            }
+            else {
+                alert("Väl ett betyg!")
+            }
+        }
+        else {
+            alert("Välj ett namn!")
+        }
     }
 
     function deleteMovie(id){
