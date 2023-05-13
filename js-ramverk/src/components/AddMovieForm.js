@@ -1,6 +1,8 @@
 import React, {useState, useRef} from 'react'
 import MovieList from './MovieList';
 import SaveMoviesButton from './SaveMoviesButton';
+import OrderByAlphaButton from './OrderByAlphaButton';
+import OrderByGradeButton from './OrderByGradeButton';
 
 export default function AddMovieForm() {
     const [movies, setMovies] = useState([{}]);
@@ -48,7 +50,7 @@ export default function AddMovieForm() {
 
             <SaveMoviesButton addMovieFunction={addMovie}/>
             <MovieList movies={movies} deleteMovieFunction={deleteMovie}/>
-
+            <OrderByAlphaButton movies={movies} setMovies={setMovies}/>
         </div>
     )
 }
