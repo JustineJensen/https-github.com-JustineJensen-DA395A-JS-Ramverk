@@ -1,6 +1,4 @@
 import React from 'react'
-import SaveMoviesButton from './SaveMoviesButton'
-import OrderByAlphaButton from './OrderByAlphaButton'
 
 export default function AddMovieForm() {
     return (
@@ -25,8 +23,6 @@ export default function AddMovieForm() {
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <SaveMoviesButton />
-                <OrderByAlphaButton />
             </fieldset>
             </form>
         </div>
