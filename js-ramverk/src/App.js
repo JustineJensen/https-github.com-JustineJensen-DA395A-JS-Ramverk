@@ -4,6 +4,7 @@ import SaveMoviesButton from './components/SaveMoviesButton'
 import OrderByAlphaButton from './components/OrderByAlphaButton'
 import OrderByGradeButton from './components/OrderByGradeButton';
 import MovieList from './components/MovieList';
+import OrderByGradeButton from './components/OrderByGradeButton';
 function App() {
   return (
     <div className="App">
