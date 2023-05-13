@@ -5,7 +5,7 @@ import OrderByAlphaButton from './OrderByAlphaButton';
 import OrderByGradeButton from './OrderByGradeButton';
 
 export default function AddMovieForm() {
-    const [movies, setMovies] = useState([{}]);
+    const [movies, setMovies] = useState([]);
 
     const titleInputRef = useRef();
     const gradeInputRef = useRef();
