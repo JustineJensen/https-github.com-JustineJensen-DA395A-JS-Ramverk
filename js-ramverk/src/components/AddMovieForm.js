@@ -1,6 +1,22 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
+import MovieList from './MovieList';
+import SaveMoviesButton from './SaveMoviesButton';
 
 export default function AddMovieForm() {
+    const [movies, setMovies] = useState([{}]);
+
+    const titleInputRef = useRef();
+    const gradeInputRef = useRef();
+
+    function addMovie(){
+        const newId = movies.length +1;
+        setMovies([...movies, {
+            id: newId,
+            title: titleInputRef.current.value,
+            grade: gradeInputRef.current.value
+        }]);
+    }
+
     return (
         <div>
             <h1>
@@ -11,11 +27,11 @@ export default function AddMovieForm() {
                 <legend>Lägg till en film</legend>
 
                 <label for="title-field">Titel:</label>
-                <input type="text" id="title-field" class="form-control" />
+                <input type="text" id="title-field" class="form-control" ref={titleInputRef}/>
 
                 <label for="rating-field">Betyg:</label>
 
-                <select type="text" id="rating-field" class="form-control">
+                <select type="text" id="rating-field" class="form-control" ref={gradeInputRef}>
                     <option value="0">Välj betyg här...</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -25,6 +41,10 @@ export default function AddMovieForm() {
                 </select>
             </fieldset>
             </form>
+
+            <SaveMoviesButton addMovieFunction={addMovie}/>
+            <MovieList movies={movies}/>
+
         </div>
     )
 }
