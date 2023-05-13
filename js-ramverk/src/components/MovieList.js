@@ -1,5 +1,6 @@
 import React from 'react'
 import Movie from './Movie'
+import './styles/MovieList.css'
 
 export default function MovieList(props) {
     return (

@@ -1,6 +1,7 @@
-import React from 'react'
-import starImg from '../resources/star.png'
-import deleteImg from '../resources/delete.png'
+import React from 'react';
+import starImg from '../resources/star.png';
+import deleteImg from '../resources/delete.png';
+import './styles/Movies.css';
 
 export default function Movie(props) {
 
